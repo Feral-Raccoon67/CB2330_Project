@@ -1,5 +1,7 @@
 # Project overview
 
+**Authors: Louise Andersson and Estelle Byström**
+
 This project aims to investigate wether it's possible to model the data presented in table 2 in (Llopart et al., 2025) according to a poisson distrubution and determine the accuracy of that model.
 
 The program rendered values that were similar to the ones observed from the paper, which means that a possion distribution is a possible model for the data investigated. However, since the expected values generated from the model and the observed values from the article weren't a complete fit, a poisson distribution does not describe the biology behind the crossover events discussed in the paper. Additionally, since only a few chromosome arms are presented in the data, the model might not represent the reality of other chromosome arms.
