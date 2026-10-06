@@ -1,21 +1,31 @@
-# CB2330_Project
+# Project overview
 
-**The paper:** Llopart, A., Pettie, N., Ryon, E. and Comeron, J. M. (2025) The crossover landscape and interference in Drosophila santomea. PLoS Genetics 21:e1011885. https://doi.org/10.1371/journal.pgen.1011885
+This project aims to investigate wether it's possible to model the data presented in table 2 in (Llopart et al., 2025) according to a poisson distrubution and determine the accuracy of that model.
 
-**The data object:** The data used in this project was based on table 2 in the article, which shows the number of crossovers for five different chromosome types and the total number of crossovers for five different types of chromosome arms. Thie different crossoncers are NCO, meaning no or zero crossovers, 1CO, meaning one crossover, 2CO for two crossovers, 3CO for three crossovers and 4CO for four crossovers. The types chromosome arms are 2L, 2R^2, 3L, 3R and X.
+The program rendered values that were similar to the ones observed from the paper, which means that a possion distribution is a possible model for the data investigated. However, since the expected values generated from the model and the observed values from the article weren't a complete fit, a poisson distribution does not describe the biology behind the crossover events discussed in the paper. Additionally, since only a few chromosome arms are presented in the data, the model might not represent the reality of other chromosome arms.
 
-**The random variable chosen:** The variable analysed in this notebook was the number of crossover events occuring on a chromosome arm in a randomly selected meiotic product, for each type of crossover.
+## The paper
 
-**What the paper does:** The article presents a genome-wide, high-resolution crossover map for the fruit fly Drosophila santomea and compares it to other closely related fruit flies. The researshers examined 784 individual meiotic products that captured intraspecific variation in crossing over control and identified 2,288 genome-wide crossovers. The findings suggested a link between the intensity of crossover interference and the centromere effect, and the researchers proposed that "stronger crossover interference is associated with a smaller crossover-competent region—determined by the combined centromere and telomere effects—to prevent the deleterious consequences of multiple crossovers occurring too close together".
+The article presents a genome-wide, high-resolution crossover map for the fruit fly Drosophila santomea and compares it to other closely related fruit flies. The researshers examined 784 individual meiotic products that captured intraspecific variation in crossing over control and identified 2,288 genome-wide crossovers. The findings suggested a link between the intensity of crossover interference and the centromere effect, and the researchers proposed that "stronger crossover interference is associated with a smaller crossover-competent region—determined by the combined
 
-**The generative model proposed:** A poission distribution was proposed as a mechanism for how the crossovers accumulates. The mechanism is choosen based on the fact that the data is based on a set number of crossover event and measures the number of crossovers for each event, for each type of crossover.
+## Requirements
 
-**Parameters and assumptions:** The parameter Theta was used to describe the average number of crossovers per crossover event. The crossover classes and the chromosomes mentioned under "The data object", as well as the number of crossovers happening per crossover event, for each type of chromosome.
+The project uses python and the following packages:
 
-**The forward simulation:** The forward simulation was produced by estimating theta as the number of crossovers divided by the number of meiotic events.
+NumPy
 
-**The parameterization/fitting:** The estimated parameter Theta was fitted to the papers data by running a negative likelihood for the poisson distribution of theta and the total number of observed crossover event (denoted as counts) for each type of crossover (denoted as crossover_classes). The total number of observed crossover events were calculated as the sum of all five types of chromosome arms. The parameterization resulted in the fitted Theta value for each type chromosome arm.
+Math
 
-**What/if the model adds to the paper:**
+Matplotlib
 
-**Model limitations/how it breaks:** 
+## Usage
+
+Open and run `project.ipynb`
+
+The source data from *Table 2* of the paper is also provided in `data/Crossover_data.xlsx`
+
+## Reference
+
+Llopart, A., Pettie, N., Ryon, A. and Comeron, J.M. (2025). A high-resolution crossover landscape in Drosophila santomea reveals rapid and concerted evolution of multiple properties of crossing over control. PLOS Genetics, 21(10), p.e1011885. doi:10.1371/journal.pgen.1011885.
+
+
